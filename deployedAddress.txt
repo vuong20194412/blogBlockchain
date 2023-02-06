@@ -1,0 +1,1 @@
+bnb-testnet: 0x59865afbb3939580BE6c2C97B800a51Ae5FdBdeD
