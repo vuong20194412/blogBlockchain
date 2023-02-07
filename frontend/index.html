@@ -22,7 +22,7 @@
       const currentUrl = window.location.href.substring(0, i);
       document.getElementById('favicon').setAttribute('href', currentUrl + '/favicon.ico');
       document.getElementById('manifest').setAttribute('href', currentUrl + '/manifest.json');
-      import App from `${currentUrl}/src/App.js`;
+      import App from `https://vuong20194412.github.io/frontend/src/App.js`;
       Vue.createApp(App).mount('#root');
     </script>
   </body>
