@@ -17,12 +17,12 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script type="module" defer>
+    <script type="module">
       const i = window.location.href.lastIndexOf('/');
       const currentUrl = window.location.href.substring(0, i);
       document.getElementById('favicon').setAttribute('href', currentUrl + '/favicon.ico');
       document.getElementById('manifest').setAttribute('href', currentUrl + '/manifest.json');
-      import App from encodeURI(`${currentUrl}/src/App.js`);
+      import App from `${currentUrl}/src/App`;
       Vue.createApp(App).mount('#root');
     </script>
   </body>
