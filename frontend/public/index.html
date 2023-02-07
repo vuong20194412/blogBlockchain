@@ -2,17 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link id="favicon" rel="icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Web site created using create-react-app" />
+
+    <link id="manifest" rel="manifest" />
 
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-
     <script>
-      window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/public/index.html';
+      const i = window.location.href.lastIndexOf('/');
+      const currentUrl = window.location.href.substring(0, i);
+      document.getElementById('favicon').setAttribute('href', currentUrl + '/favicon.ico');
+      document.getElementById('manifest').setAttribute('href', currentUrl + '/manifest.json');
     </script>
+    <div id="root"></div>
   </body>
 </html>
